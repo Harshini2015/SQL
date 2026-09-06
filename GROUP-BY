@@ -1,0 +1,5 @@
+GROUP BY - Sum,Avg,Count 
+
+SELECT department,AVG(salary)
+FROM employees
+GROUP BY department;
