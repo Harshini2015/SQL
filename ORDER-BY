@@ -1,0 +1,4 @@
+ORDER BY- sorting rows in a particular order (ASC/DESC)
+
+SELECT * FROM employees
+ORDER BY salary DESC;
