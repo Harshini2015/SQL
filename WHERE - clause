@@ -1,0 +1,3 @@
+Filter Individual rows based on specific conditions - like age or name
+SELECT S_Name , Age FROM Student
+WHERE Age >= 18;
