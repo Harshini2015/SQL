@@ -254,7 +254,7 @@ WHERE salary > 50000;
 
 ---
 
-# 🎯 Common Interview Questions
+# 🎯 Common Questions
 
 ### 1. What is SQL?
 
@@ -340,3 +340,225 @@ Used to create, retrieve, modify and manage data
 
 
 > **"SQL is a declarative, domain-specific language used to communicate with and manage data in relational databases."**
+>
+> # 🗄️ SQL — Structured Query Language
+
+> [!IMPORTANT]
+> **SQL (Structured Query Language)** is a standard language used to **store, retrieve, manipulate, and manage data** in relational databases.
+
+---
+
+## 🟢 1. What is SQL?
+
+SQL is used to communicate with a **relational database**.
+
+With SQL, we can:
+
+* Create databases and tables
+* Insert data
+* Retrieve data
+* Update data
+* Delete data
+* Filter and sort data
+* Group and aggregate data
+* Combine data from multiple tables
+* Control access to data
+* Manage transactions
+
+### Example
+
+```sql
+SELECT name, salary
+FROM employees
+WHERE salary > 50000;
+```
+
+This retrieves employees whose salary is greater than `50,000`.
+
+---
+
+## 🟢 2. Where is SQL Used?
+
+SQL is commonly used with relational database systems such as:
+
+* MySQL
+* PostgreSQL
+* Oracle Database
+* Microsoft SQL Server
+* SQLite
+* MariaDB
+
+---
+
+## 🟢 3. How SQL Works
+
+A simplified flow:
+
+```text
+Application
+     ↓
+   SQL Query
+     ↓
+Database Management System
+     ↓
+   Database
+     ↓
+   Result
+```
+
+Example:
+
+```sql
+SELECT * FROM employees;
+```
+
+The DBMS receives the query, processes it, accesses the required data, and returns the result.
+
+---
+
+## 🟡 4. SQL is Declarative
+
+SQL mainly tells the database **what data we want**, rather than exactly how to retrieve it.
+
+```sql
+SELECT name
+FROM employees
+WHERE department = 'IT';
+```
+
+We specify **what** we want.
+
+The database optimizer determines an efficient way to execute the query.
+
+---
+
+## 🟢 5. SQL is Used for CRUD Operations
+
+CRUD stands for:
+
+| Operation | SQL      |
+| --------- | -------- |
+| Create    | `INSERT` |
+| Read      | `SELECT` |
+| Update    | `UPDATE` |
+| Delete    | `DELETE` |
+
+Example:
+
+```sql
+INSERT INTO employees VALUES (101, 'Rahul', 50000);
+
+SELECT * FROM employees;
+
+UPDATE employees
+SET salary = 55000
+WHERE employee_id = 101;
+
+DELETE FROM employees
+WHERE employee_id = 101;
+```
+
+---
+
+## 🟢 6. Basic SQL Example
+
+### Table
+
+```sql
+CREATE TABLE employees (
+    employee_id INT PRIMARY KEY,
+    name VARCHAR(100),
+    salary DECIMAL(10,2)
+);
+```
+
+### Insert
+
+```sql
+INSERT INTO employees
+VALUES (101, 'Rahul', 50000);
+```
+
+### Retrieve
+
+```sql
+SELECT *
+FROM employees;
+```
+
+### Update
+
+```sql
+UPDATE employees
+SET salary = 55000
+WHERE employee_id = 101;
+```
+
+### Delete
+
+```sql
+DELETE FROM employees
+WHERE employee_id = 101;
+```
+
+---
+
+## 🟡 7. SQL vs Programming Languages
+
+SQL is specialized for working with structured data.
+
+| SQL                     | Java                                 |
+| ----------------------- | ------------------------------------ |
+| Database query language | General-purpose programming language |
+| Mainly declarative      | Mainly imperative/object-oriented    |
+| Works with databases    | Builds complete applications         |
+| Used to manipulate data | Used for application logic           |
+
+In real applications, they work together.
+
+```text
+Java Application
+       ↓
+      JDBC
+       ↓
+      SQL
+       ↓
+    Database
+```
+
+---
+
+## 🔴 8. Important Distinction
+
+> **SQL is a language. A DBMS is software that understands and executes SQL.**
+
+For example:
+
+```text
+SQL          → Language
+MySQL        → DBMS
+PostgreSQL   → DBMS
+Oracle       → DBMS
+```
+
+---
+
+## 🧠 Quick Revision
+
+```text
+SQL
+│
+├── Retrieve data       → SELECT
+├── Insert data         → INSERT
+├── Modify data         → UPDATE
+├── Delete data         → DELETE
+├── Create objects      → CREATE
+├── Modify objects      → ALTER
+├── Remove objects      → DROP
+├── Control access      → GRANT / REVOKE
+└── Transactions        → COMMIT / ROLLBACK
+```
+
+> [!TIP]
+> Remember: **SQL communicates with relational databases.**
+
