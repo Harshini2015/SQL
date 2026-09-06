@@ -1,0 +1,7 @@
+Filtering after GROUP-BY 
+How many students are in each age group but only display age groups with more than one student 
+
+SELECT Age,COUNT(Roll_No) AS No_Of_Students
+FROM Student 
+GROUP BY Age
+HAVING COUNT(Roll_No) > 1;
